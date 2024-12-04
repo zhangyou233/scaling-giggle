@@ -1,0 +1,47 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center; 
+  position: relative;/* 添加此行让文字居中对齐 */
+}
+
+.banner .content {
+  display: flex;
+  flex-direction: column; /* 确保内容从上到下排列 */
+  align-items: center; /* 水平方向居中 */
+}
+
+.banner .content .title {
+  font-size: 6em;
+  font-family:"Protest Revolution", sans-serif;
+}
+
+.banner .content .subtitle { /* 假设小字的类名是 subtitle */
+  font-size: 1.5em; /* 可调整大小 */
+  margin-top: 1em; /* 添加与标题的间距 */
+  font-family: "Shadows Into Light", cursive;
+}
+ 
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("moon.png"), url("mountains_front.png"), url("mountains_behind.png"),url("stars.png");
+  background-size: cover; /* 每张图片都覆盖整个容器 */
+  background-position: center; /* 每张图片居中对齐 */
+  z-index: -1; /* 确保背景位于内容后面 */
+  background-repeat: no-repeat; /* 确保图片不重复 */
+
+  mask-image: url(ink2.gif);
+  mask-size: cover;
+  mask-position: center;
+}
+
