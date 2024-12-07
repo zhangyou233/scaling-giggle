@@ -1,2 +1,2 @@
-# scaling-giggle
-anything 
+# 网页小作品
+目前只有两个页面，以后会更新
